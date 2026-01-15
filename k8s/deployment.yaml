@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-webapp
+spec:
+  replicas: 3  # THIS is the magic. 3 copies running at once.
+  selector:
+    matchLabels:
+      app: python-webapp
+  template:
+    metadata:
+      labels:
+        app: python-webapp
+    spec:
+      containers:
+      - name: python-app
+        image: my-k8s-app:v1
+        imagePullPolicy: IfNotPresent # Uses local image so we don't need DockerHub yet
+        ports:
+        - containerPort: 5000
