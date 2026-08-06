@@ -15,7 +15,6 @@ The architecture features a self-healing deployment with 3 replicas and a Load B
 ![1](/images/kube.png)
 
 ### 2. Load Balancing in Action
-*(Paste your browser screenshot showing different Pod IDs here)*
 ![2](/images/1.png)
 ![3](/images/2-.png)
 ![4](/images/3-.png)
