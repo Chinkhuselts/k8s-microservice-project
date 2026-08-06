@@ -18,6 +18,11 @@ The architecture features a self-healing deployment with 3 replicas and a Load B
 ![2](/images/1.png)
 ![3](/images/2-.png)
 ![4](/images/3-.png)
+
+### 3. Auto Scaling
+```bash
+kubectl autoscale deployment python-webapp --cpu=50% --min=2 --max=6
+```
 ## 🚀 How to Run
 1. Build the image: `docker build -t my-k8s-app:v1 .`
 2. Apply Manifests: `kubectl apply -f k8s/`
